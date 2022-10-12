@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Aplication</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="https://pl.allfont.net/allfont.css?fonts=cyrvetica-extra-outline" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul id="nav-ul">
+            <li id="nav-logo">
+                <p><i class="fa-solid fa-palette"></i> <span>Paint Aplication</span></p>
+            </li>
+            <li class="nav-link">
+                <p>Pędzle</p>
+                <ul class="nav-box">
+                    <li>
+                        <button title="Ołówek"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="active pen" title="Pędzel"><i class="fa-solid fa-paintbrush"></i></button>
+                        <button title="Pióro"><i class="fa-solid fa-pen-nib"></i></button>
+                        <button title="Kredka"><i class="fa-solid fa-pen-clip"></i></button>
+                        <button title="Wypełnienie"><i class="fa-solid fa-fill-drip"></i></button>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-link">
+                <p>Kształty</p>
+                <ul class="nav-box">
+                    <li>
+                        <button id="rectangleBtn" title="Prostokąt"><i class="fa-solid fa-square-full"></i></button>
+                        <button title="Zaokrąglony prostokąt"><i class="fa-solid fa-square"></i></button>
+                        <button title="Kółko"><i class="fa-regular fa-circle"></i></button>
+                        <button title="Zamalowane kółko"><i class="fa-solid fa-circle"></i></button>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-link">
+                <p>Kolory</p>
+                <ul class="nav-box">
+                    <li>
+                        <button type="button" class="color-pick " style="background-color: red;"></button>
+                        <button type="button" class="color-pick" style="background-color: tomato;"></button>
+                        <button type="button" class="color-pick" style="background-color: Salmon;"></button>
+                        <button type="button" class="color-pick" style="background-color: LightSalmon;"></button>
+                        <button type="button" class="color-pick" style="background-color: Coral;"></button>
+                        <button type="button" class="color-pick" style="background-color: DarkOrange;"></button>
+                        <button type="button" class="color-pick" style="background-color: Pink;"></button>
+                        <button type="button" class="color-pick" style="background-color: LightPink;"></button>
+                        <button type="button" class="color-pick" style="background-color: HotPink;"></button>
+                        <button type="button" class="color-pick" style="background-color: DeepPink;"></button>
+                        <button type="button" class="color-pick" style="background-color: MediumVioletRed;"></button>
+                        <button type="button" class="color-pick" style="background-color: Pink;"></button>
+                        <button type="button" class="color-pick" style="background-color: Fuchsia;"></button>
+                        <button type="button" class="color-pick" style="background-color: MediumOrchid;"></button>
+                        <button type="button" class="color-pick" style="background-color: BlueViolet;"></button>
+                        <button type="button" class="color-pick" style="background-color: DarkViolet;"></button>
+                        <button type="button" class="color-pick" style="background-color: LightSeaGreen;"></button>
+                        <button type="button" class="color-pick" style="background-color: Cyan;"></button>
+                        <button type="button" class="color-pick" style="background-color: Aquamarine;"></button>
+                        <button type="button" class="color-pick" style="background-color: DeepSkyBlue;"></button>
+                        <button type="button" class="color-pick" style="background-color: DodgerBlue;"></button>
+                        <button type="button" class="color-pick" style="background-color: Lime;"></button>
+                        <button type="button" class="color-pick" style="background-color: ForestGreen;"></button>
+                        <button type="button" class="color-pick" style="background-color: DarkGray;"></button>
+                        <button type="button" class="color-pick" style="background-color: DimGray;"></button>
+                        <button type="button" class="active color-pick" style="background-color: Black;"></button>
+
+                        <input type="color" id="color_picker" value="#F4A460">
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-link">
+                <p>Rozmiar</p>
+                <ul class="nav-box">
+                    <li>
+                        <p>Wybierz rozmiar pędzla</p>
+                        <input class="styled-slider slider-progress" type="range" min="1" max="100" id="pen_range"
+                            value="2">
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-link">
+                <div class="bottom-nav">
+                    <button id="undo" type="button"><i class="fa-solid fa-rotate-left"></i> Cofnij</button>
+                    <button id="clear" type="button"><i style="margin-right:10px"
+                            class="fa-solid fa-trash-can"></i>Wyczyść</button>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+
+    <section id="aplication">
+
+        <div id="canvasBox">
+            <canvas></canvas>
+            <div class="temporary_dimensions"></div>
+        </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
